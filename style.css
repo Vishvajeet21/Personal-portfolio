@@ -346,8 +346,8 @@
 
     color: #fff;
     padding: 80px 20px;
-    padding-top: 100px;
-    padding-bottom: 150px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .intro-container {
@@ -442,7 +442,7 @@
 
   .education-section {
 
-    padding: 100px 20px;
+    padding: 0px 20px;
     color: #fff;
     padding-bottom: 0px;
   }
@@ -569,11 +569,11 @@
 
 
   .skills-section {
-    padding: 60px 20px;
+    padding: 0px 20px;
     color: #fff;
     text-align: center;
     padding-top: 100px;
-    padding-bottom: 0px;
+ 
     
 
   }
@@ -667,7 +667,7 @@
   .experience-section {
     padding: 60px 20px;
 
-    padding-bottom: 100px;
+    
     color: #fff;
     text-align: center;
   }
