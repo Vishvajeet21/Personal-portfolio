@@ -24,10 +24,6 @@
 
   }
 
-
-
-
-
   .site-logo {
     width: 80px;
     height: 80px;
@@ -53,7 +49,7 @@
 
   /* Navbar Base */
   .navbar {
-    position: fixed;
+    
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -65,15 +61,24 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .navbar.scrolled {
-    background-color: rgba(15, 15, 15, 0.6);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+/* By default (mobile), fixed */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+/* Remove fixed on large and above */
+@media (min-width: 992px) {
+  #navbar {
+    position: static;
   }
+}
 
   .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: nowrap;
   }
 
@@ -161,11 +166,12 @@
   }
 
 
-  /* ===== Hero Section ===== */
+  
   section {
     width: 100%;
-    min-height: 90vh;
+    min-height: 80vh;
     margin-top: 100px;
+ 
   }
 
   .hero-section {
@@ -176,6 +182,14 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 0;
+    margin-top: -100px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .hero-section {
+     margin-top: 0px;
+    }
+    
   }
 
   .hero-text {
@@ -341,6 +355,10 @@
       width: 90%;
     }
   }
+
+
+
+
 
   .introduction-section {
 
@@ -509,8 +527,7 @@
     border-radius: 15px;
     width: 45%;
     box-shadow: 0 0 15px rgba(183, 17, 224, 0.2);
-    z-index: 1;
-    
+    z-index: -1;
   }
 
   .edu-item:nth-child(odd) .edu-content {
@@ -567,6 +584,64 @@
 
 
 
+  /* Certifications - New Class Names */
+
+.cert-box {
+  background-color: #1a1a1a;
+  
+  padding: 25px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  color: white  ;
+  animation: floatUp 3s ease-in-out infinite;
+}
+
+  .cer-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #b711e0;
+    margin-bottom: 60px;
+    text-shadow: 0 0 8px #b711e0;
+  }
+
+.cert-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 15px #b711e0;
+}
+
+.cert-heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #b711e0;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.cert-link:hover {
+  background: #8e0dbf;
+}
+
+.cert-title-gradient {
+  background: linear-gradient(45deg, #b711e0, #6f00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
 
   .skills-section {
     padding: 0px 20px;
@@ -591,13 +666,23 @@
     color: #ccc;
   }
 
+.skills-grid {
+  display: grid;
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+
+  /* Default: small screens = 2 columns */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  /* Large screens = 4 columns */
   .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 30px;
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
   }
+}
+
 
   .skill-card {
     background: rgba(255, 255, 255, 0.07);
@@ -663,6 +748,9 @@
     transform: scale(1.05);
     box-shadow: 0 0 20px #b711e0;
   }
+
+
+
 
   .experience-section {
     padding: 60px 20px;
@@ -969,3 +1057,6 @@
       margin: 0 6px;
     }
   }
+
+
+  

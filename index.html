@@ -12,35 +12,35 @@
     <link rel="stylesheet" href="style.css" />
     <title>Portfolio Website</title>
     <link rel="icon" href="logo3.png">
+
 </head>
 
 <body style="background: linear-gradient(to right, #000000, #330033);">
 
-    <!-- <video autoplay muted loop playsinline class="bg-video">
-        <source src="background-vdo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video> -->
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" class="btn  position-fixed bottom-0 end-0 m-3 rounded-circle"
+        style="z-index: 1055; background-color: #b711e0; color: white; border: none; width: 50px; height: 50px;">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
 
     <div class="site-logo" data-aos="zoom-in" data-aos-duration="1500">
         <img src="logo2.png" alt="" class="site-logo" />
     </div>
 
 
-    <!-- In <head>: Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome (for hamburger icon) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg b bg-opacity-75" id="navbar">
+    <nav class="navbar fixed-sm-top  bg-opacity-75" id="navbar">
+
+
         <div class="container-fluid navbar-container d-flex justify-content-end">
 
-
-
             <!-- Toggle for mobile -->
-            <button class="navbar-toggler d-lg-none border-0 m-1" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#mobileMenu" aria-controls="mobileMenu">
-                <i class="fa-solid fa-bars text-white fs-3 "></i>
+            <button class="navbar-toggler d-lg-none border-0 mt-2 " style="position: absolute; top: 10px; right: 4px;"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                <i class="fa-solid fa-bars text-white fs-1 "></i>
             </button>
 
             <!-- Desktop nav-links -->
@@ -48,6 +48,7 @@
                 <a href="#hero-section" class="m-3  text-decoration-none nav-links">Home</a>
                 <a href="#introduction" class="m-3  text-decoration-none nav-links">Introduction</a>
                 <a href="#education" class="m-3  text-decoration-none nav-links">Education</a>
+                <a href="#Achievements" class="m-3  text-decoration-none nav-links">Achievements</a>
                 <a href="#skills" class="m-3  text-decoration-none nav-links">Skills</a>
                 <a href="#experience" class="m-3  text-decoration-none nav-links">Experience</a>
                 <a href="#contact" class="m-3  text-decoration-none nav-links">Contact</a>
@@ -65,6 +66,8 @@
                     <a href="#hero-section" class="text-white text-decoration-none offcanvas-link ">Home</a>
                     <a href="#introduction" class="text-white text-decoration-none offcanvas-link">Introduction</a>
                     <a href="#education" class="text-white text-decoration-none offcanvas-link">Education</a>
+                    <a href="#Achievements" class="m-3  text-decoration-none nav-links">Achievements</a>
+
                     <a href="#skills" class="text-white text-decoration-none offcanvas-link">Skills</a>
                     <a href="#experience" class="text-white text-decoration-none offcanvas-link">Experience</a>
                     <a href="#contact" class="text-white text-decoration-none offcanvas-link">Contact</a>
@@ -74,8 +77,7 @@
         </div>
     </nav>
 
-    <!-- Bootstrap Bundle JS (place before </body>) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <!-- JS to close offcanvas when a link is clicked -->
     <script>
@@ -90,8 +92,8 @@
 
 
     <section id="hero-section">
-        <div class="hero-section mt-3">
-            <div class="hero-text mt-5    ">
+        <div class="hero-section ">
+            <div class="hero-text  ">
                 <h1>Hey I'm <span>Vishvajeet</span></h1>
                 <div class="typewriter-container">
                     <div class="typewriter">
@@ -109,8 +111,8 @@
                     <a href=" https://www.linkedin.com/in/vishvajeet-khopkar-242613324/"><i
                             class="fa-brands fa-linkedin mt-3 ms-0"></i></a>
                     <a href=" https://www.instagram.com/vishu__2133/"><i class="fa-brands fa-instagram"></i></a>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
+                    <a href="https://github.com/Vishvajeet21"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/vishukhopkar21"><i class="fa-brands fa-twitter"></i></a>
                 </div>
                 <button><a href="#introduction" style="text-decoration: none; color: white;">About Me</a></button>
             </div>
@@ -120,7 +122,7 @@
         </div>
     </section>
 
-    <section class="introduction-section" id="introduction">
+    <section class="introduction-section pt-3 " id="introduction">
         <div class="intro-container" data-aos="fade-up" data-aos-duration="1500">
             <div class="intro-left">
                 <img src="vishu_final.png" alt="Vishvajeet Khopkar" />
@@ -150,7 +152,7 @@
     </section>
 
 
-    <section class="education-section" id="education">
+    <section class="education-section pt-5 " id="education">
         <h2 class="edu-title" style="  text-shadow: 0 0 15px #b711e0;">MY EDUCATION</h2>
         <div class="edu-timeline">
 
@@ -218,54 +220,130 @@
 
 
 
-    <section class="skills-section d-flex justify-content-center align-items-center"  id="skills">
-<div style="width: 100%;">
-        <div class="skills-content" data-aos="fade-up" data-aos-duration="1500">
-            <h2 style="  text-shadow: 0 0 15px #b711e0;">MY SKILLS</h2>
-            <p>I love using modern tools & technologies to bring ideas to life. Here are the technologies I’m familiar
-                with:</p>
+    <section id="Achievements" class="pt-5 ">
+        <div class="container my-5 certification-section" id="certifications" data-aos="fade-up"
+            data-aos-duration="1500">
+            <h2 class="text-center mb-5 cer-title" style="text-shadow: 0 0 15px #b711e0;">🎓 Achievements</h2>
+            <div class="row g-4 ">
 
-            <div class="skills-grid">
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" />
-                    <p>HTML</p>
-                </div>
-                <div class="skill-card" 3.3 data-aos-delay="200">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" />
-                    <p>CSS</p>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" />
-                    <p>JavaScript</p>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" alt="Bootstrap" />
-                    <p>Bootstrap 5</p>
+                <!-- Certificate 1 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="cert-box h-100">
+                        <h5 class="cert-heading">Developing Soft Skills and Personality (NPTEL)</h5>
+                        <p class=" small" style="color: rgb(120, 120, 120);">Duration: Aug – Oct 2024</p>
+                        <p>Completed this 8-week NPTEL course, gaining skills in communication, confidence, and time
+                            management.</p>
+                        <a href="Developing Soft Skills and Personality .pdf" target="_blank" class="cert-link">🔗 view
+                            Certificate</a>
+                    </div>
                 </div>
 
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React" />
-                    <p>React</p>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/512px-Oracle_logo.svg.png"
-                        alt="Oracle" />
-                    <p>Oracle</p>
-                </div>
-
-
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/mysql-21-1174941.png" alt="MySQL" />
-                    <p>MySQL</p>
+                <!-- Certificate 2 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="cert-box h-100">
+                        <h5 class="cert-heading">Pointers in C Programming</h5>
+                        <p class=" small" style="color: rgb(120, 120, 120);">Issued: April 11, 2024</p>
+                        <p>Covers pointer arithmetic, low-level memory management, and core C concepts.</p>
+                        <a href="1-96397cdf-464a-4b53-b3c7-cca7b6e303a2-1.pdf" target="_blank" class="cert-link ">🔗
+                            view
+                            Certificate</a>
+                    </div>
                 </div>
 
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="800">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
-                    <p>GitHub</p>
+                <!-- Certificate 3 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="cert-box h-100">
+                        <h5 class="cert-heading">Relational Database Management System (RDBMS)</h5>
+                        <p class=" small" style="color: rgb(120, 120, 120);">Issued: June 26, 2024</p>
+                        <p>Mastered SQL queries, normalization, and relational database design.</p>
+                        <a href="1-6a4fc457-9e38-49c8-84cb-f76be0b24275.pdf" target="_blank" class="cert-link">🔗 view
+                            Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Certificate 4 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="cert-box h-100">
+                        <h5 class="cert-heading">Great Learning Certificate</h5>
+                        <p class=" small" style="color: rgb(120, 120, 120);">Issued by: Great Learning</p>
+                        <p>Completed practical training in selected domain through Great Learning platform.</p>
+                        <a href="VISHVAJEET KHOPAKAR.pdf" target="_blank" class="cert-link">🔗 view
+                            Certificate</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="skills-section d-flex justify-content-center align-items-center" id="skills">
+        <div style="width: 100%;">
+            <div class="skills-content" data-aos="fade-up" data-aos-duration="1500">
+                <h2 style="  text-shadow: 0 0 15px #b711e0;">MY SKILLS</h2>
+                <p>I love using modern tools & technologies to bring ideas to life. Here are the technologies I’m
+                    familiar
+                    with:</p>
+
+                <div class="skills-grid">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" />
+                        <p>HTML</p>
+                    </div>
+                    <div class="skill-card" 3.3 data-aos-delay="200">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" />
+                        <p>CSS</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" />
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" alt="Bootstrap" />
+                        <p>Bootstrap 5</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+                            alt="Tailwind CSS" />
+                        <p>Tailwind CSS</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React" />
+                        <p>React</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
+                        <img src="https://cdn.worldvectorlogo.com/logos/material-ui-1.svg" alt="Material UI" />
+                        <p>Material UI</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="800">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js" />
+                        <p>Node.js</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="900">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg"
+                            alt="Express.js" style="width: 60px; height: auto;" />
+                        <p>Express.js</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="1000">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/512px-Oracle_logo.svg.png"
+                            alt="Oracle" />
+                        <p>Oracle</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="1100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
+                        <p>GitHub</p>
+                    </div>
+
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="1200">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/mysql-21-1174941.png" alt="MySQL" />
+                        <p>MySQL</p>
+                    </div>
+
                 </div>
             </div>
-</div>
     </section>
+
 
     <section class="experience-section" id="experience">
         <div class="experience-content" data-aos="fade-up" data-aos-duration="1500">
@@ -320,10 +398,54 @@
                         Created a clean and modern website for an IT company using HTML, CSS, Bootstrap 5, showcasing
                         services and team.
                         <br />
-                        🔗 <a href="https://vishvajeet21.github.io/Codenest-Tech/" target="_blank" style="text-decoration: none;">View Project</a>
+                        🔗 <a href="https://vishvajeet21.github.io/Codenest-Tech/" target="_blank"
+                            style="text-decoration: none;">View Project</a>
                     </p>
                 </div>
             </div>
+
+            <!-- Panhala 13D Theater Project -->
+            <div class="experience-card mt-5">
+                <div class="experience-logo">
+                    <i class="fas fa-video fs-3"></i>
+                </div>
+                <div class="experience-info">
+                    <h3>Panhala 13D RanSangram</h3>
+                    <p class="company">Personal Project</p>
+                    <p class="duration">July 2025</p>
+                    <p class="details">
+                        Developed an immersive 13D experience website inspired by Maratha history using HTML, CSS, and
+                        Bootstrap 5.
+                        The design uses royal colors, smooth AOS animations, and responsive layouts to recreate the
+                        legacy of Chhatrapati Shivaji Maharaj.
+                        <br />
+                        🔗 <a href="https://vishvajeet21.github.io/Panhala-13D-Theater/" target="_blank"
+                            style="text-decoration: none;">View Project</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Personal Portfolio Project -->
+            <div class="experience-card mt-5">
+                <div class="experience-logo">
+                    <i class="fas fa-user-circle fs-3"></i>
+                </div>
+                <div class="experience-info">
+                    <h3>Personal Portfolio Website</h3>
+                    <p class="company">Personal Project</p>
+                    <p class="duration">July 2025</p>
+                    <p class="details">
+                        Designed and developed a personal portfolio to showcase my skills, projects, and achievements
+                        using HTML, CSS, and Bootstrap 5.
+                        It features responsive design, smooth scroll, Font Awesome icons, and AOS animations for a
+                        professional look and user experience.
+                        <br />
+                        🔗 <a href="https://vishvajeet21.github.io/Personal-portfolio/" target="_blank"
+                            style="text-decoration: none;">View Portfolio</a>
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -354,7 +476,7 @@
         </div>
     </section>
 
-    <footer class="smart-footer" style=" box-shadow: 0 0 12px #b711e0;">
+    <footer class="smart-footer" style=" border-top: 2px solid #b711e0;">
         <div class="footer-container">
             <div class="footer-left">
                 <img src="logo2.png" alt="Logo" class="footer-logo" />
@@ -368,6 +490,7 @@
             <div class="footer-right">
                 <a href="https://linkedin.com/in/vishvajeetkhopkar" target="_blank"><i
                         class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Vishvajeet21"><i class="fa-brands fa-github"></i></a>
                 <a href="https://instagram.com/vishu__2133" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="mailto: vishvajeetkhopkar@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="phone: 8999012143"><i class="fas fa-phone"></i></a>
@@ -388,6 +511,11 @@
         AOS.init({ offset: 0 });
     </script>
     <script src="script.js"></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 
